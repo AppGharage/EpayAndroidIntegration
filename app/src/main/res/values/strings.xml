@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EpayAI</string>
+
+    <string name="network_prompt">Choose a Network</string>
+
+    <string-array name="network_arrays">
+        <item>mtn</item>
+        <item>vodafone</item>
+        <item>airtel</item>
+        <item>tigo</item>
+    </string-array>
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/myRel">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+
+
+            <TextView
+                android:id="@+id/sample_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample App to integrate Epay Mobile Money payment"
+                android:layout_marginTop="0dp"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/amount_label"
+                android:layout_below="@id/sample_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Amount (Ghs):"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/amount_label"
+                android:hint="E.g. 20"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/customer_name_label"
+                android:layout_below="@id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name:"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/customer_name_label"
+                android:hint="E.g. Peter Perez"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/customer_email_label"
+                android:layout_below="@id/customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Address:"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/customer_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/customer_email_label"
+                android:hint="E.g. perez@gmail.com"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                android:id="@+id/momo_number_label"
+                android:layout_below="@id/customer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your Momo phone number:"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/momoinput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/momo_number_label"
+                android:hint="E.g. 02659483746"
+                android:inputType="text"/>
+
+            <TextView
+                android:id="@+id/network_label"
+                android:layout_below="@id/momoinput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Money network:"
+                android:layout_marginTop="20dp"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_below="@id/network_label"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/network_arrays"
+                android:prompt="@string/network_prompt"
+                android:layout_marginTop="20dp"/>
+            <!--<Spinner-->
+            <!--android:id="@+id/spinner2"-->
+            <!--android:layout_below="@id/spinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:entries="@array/network_arrays"-->
+            <!--android:prompt="@string/network_prompt"-->
+            <!--android:layout_marginTop="20dp"/>-->
+
+            <TextView
+                android:id="@+id/decription_label"
+                android:layout_below="@id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment description:"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/decription_label"
+                android:hint="short description for te payment (optional)"
+                android:inputType="text"/>
+
+
+
+
+
+            <Button
+                android:id="@+id/payNowButton"
+                android:layout_below="@id/description"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Pay Now"
+                android:backgroundTint="#137DC5"
+                android:textColor="#fff"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

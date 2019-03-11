@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Random String to use as reference
         String generatedString = getAlphaNumericString(10);
-        
+
         JSONObject postdata = new JSONObject();
         try {
             postdata.put("reference", generatedString);

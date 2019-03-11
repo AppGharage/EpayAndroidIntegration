@@ -160,11 +160,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Token", "Token Again: "+token);
 
         //Random String to use as reference
-        byte[] array = new byte[10]; // length is bounded by 10
-        new Random().nextBytes(array);
-        String generatedString = new String(array, Charset.forName("UTF-8"));
-
-
+        String generatedString = getAlphaNumericString(10);
+        
         JSONObject postdata = new JSONObject();
         try {
             postdata.put("reference", generatedString);
@@ -222,5 +219,33 @@ public class MainActivity extends AppCompatActivity {
 //                Log.e(TAG, String.valueOf(response));
             }
         });
+    }
+
+    // function to generate a random string of length n
+    static String getAlphaNumericString(int n)
+    {
+
+        // chose a Character random from this String
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "0123456789"
+                + "abcdefghijklmnopqrstuvxyz";
+
+        // create StringBuffer size of AlphaNumericString
+        StringBuilder sb = new StringBuilder(n);
+
+        for (int i = 0; i < n; i++) {
+
+            // generate a random number between
+            // 0 to AlphaNumericString variable length
+            int index
+                    = (int)(AlphaNumericString.length()
+                    * Math.random());
+
+            // add Character one by one in end of sb
+            sb.append(AlphaNumericString
+                    .charAt(index));
+        }
+
+        return sb.toString();
     }
 }

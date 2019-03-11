@@ -207,16 +207,11 @@ public class MainActivity extends AppCompatActivity {
                         "Please Approve Payment.";
 
                 Log.e(TAG, mMessage);
-//                Snackbar mySnackbar = Snackbar.make(RelativeLayout, success_message, 4000);
 
                 Snackbar.make(findViewById(R.id.myRel), success_message,5000)
                         .show();
 
 
-//                String[] arrSplit = mMessage.split(",");
-
-
-//                Log.e(TAG, String.valueOf(response));
             }
         });
     }
